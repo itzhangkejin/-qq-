@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(rgba(113, 197, 88, 0.4),rgba(156, 221, 52, 0.4),rgba(160, 179, 128, 0.4)); */
+}
+.conter{
+    position: absolute;
+    top: 300px;
+}
+.conter h2{
+    width: 80px;
+    height: 80px;
+    margin-left: 108px;
+    background: url(../images/音乐商标.png) no-repeat ;
+    background-size: 80px;
+}
+.conter h5{
+    margin:  10px 0 20px 120px;
+    font-weight: 400;
+    color: #7ca4b9;
+    font-size: 25px;
+}
+.conter a{
+    position: absolute;
+    width: 100%;
+    left: 85px;
+    font-size: 45px;
+    font-weight: 300;
+    color: #7ca4b4;
+}
+.conter a::after{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 22px;
+    border: 1px dashed #7ca4b4;
+    animation: exten 3s linear infinite;
+}
+@keyframes exten{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 95px;
+    }
+}
+.conter p{
+    position: absolute;
+    margin-top: 10px;
+    left: 60px;
+    width: 250px;
+    top: 200px;
+    color: #7ca4b4;
+}

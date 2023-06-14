@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我爱听</title>
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="player">
+        <div class="imgBox">
+            <img src="images/薛之谦.webp" alt="">
+        </div>
+        <div class="audio">
+            <ul>
+                <li><audio controls autoplay src="music/歌手/内地/薛之谦/薛之谦 - 演员.mp3"></audio></li>
+                <li><audio controls autoplay src="music/歌手/内地/薛之谦/薛之谦 - 意外.mp3"></audio></li>
+                <li><audio controls autoplay src="music/歌手/内地/薛之谦/薛之谦 - 怪咖.mp3"></audio></li>
+                <li><audio controls autoplay src="music/歌手/内地/薛之谦/薛之谦 - 丑八怪.mp3"></audio></li>
+                <li><audio controls autoplay src="music/歌手/内地/薛之谦/薛之谦 - 绅士.mp3"></audio></li>
+                <li><audio controls autoplay src="music/歌手/内地/薛之谦/薛之谦 - 你还要我怎样.mp3"></audio></li>
+                <li><audio controls autoplay src="music/歌手/内地/薛之谦/薛之谦 - 天后 (Live).mp3"></audio></li>
+                <li><audio controls autoplay src="music/歌手/内地/薛之谦/薛之谦 - 其实.mp3"></audio></li>
+                <li><audio controls autoplay src="music/歌手/内地/薛之谦/薛之谦 - 刚刚好.mp3"></audio></li>
+                <li><audio controls autoplay src="music/歌手/内地/薛之谦/薛之谦 _ 毛不易 - 消愁 (Live).flac"></audio></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    var player = document.querySelector('.player');
+    var audio = player.querySelector('.audio');
+    var au_ul = audio.querySelector('ul');
+    var  args = [10];
+    var num = location.search;
+    console.log(num);
+    for(i = 0 ; i<au_ul.children.length;i++){
+        au_ul.children[i].setAttribute('index', '?'+i+'=')
+    }
+    for(i = 0; i<10;i++){
+        args[i] = au_ul.children[i].getAttribute('index');
+        if(args[i]== num){
+            for(j = 0; j<10;j++){
+                au_ul.children[j].style.display= 'none';
+            }
+            au_ul.children[i].style.display = 'block';
+        }
+    }
+</script>
+</html>

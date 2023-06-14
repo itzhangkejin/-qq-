@@ -1,0 +1,617 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?ee9j03');
+    src:  url('../fonts/icomoon.eot?ee9j03#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?ee9j03') format('truetype'),
+      url('../fonts/icomoon.woff?ee9j03') format('woff'),
+      url('../fonts/icomoon.svg?ee9j03#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none; /* 去除默认的下划线 */
+
+    color: #000;    /* 去除默认的颜色和点击后变化的颜色 */
+}
+li{
+   list-style: none;
+    float: left;
+}
+input{
+    background:none;    
+
+    outline:none;   
+
+    border:none;
+}
+body{
+    overflow-x:hidden ; 
+
+    background-color: rgb(246, 246, 246);
+}
+.w{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+/* 头部 */
+.hearder{
+    height: 145px;
+    width: 100%;
+    background-color: #fff;
+}
+.hearder_1{
+    height: 90px;
+    width: 100%;
+    line-height: 90px;
+    border-bottom: 1px solid #dedede;
+}
+.logo{
+    float: left;
+    margin-left: 8px;
+    width: 185px;
+    height: 45px;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logo img{
+    height: 50px;
+    vertical-align: middle;
+}
+.fl_ul{
+    float: left;
+    height: 100%;
+    width: 400px;
+}
+.fl_ul ul{
+    width: 480px;
+}
+.fl_ul ul li{
+    position: relative;
+    margin: 0 15px;
+    height: 100%;
+}
+.fl_ul ul li a{
+    display: block;
+    padding: 0 5px 0 5px;
+    height: 100%;
+    font-size: 18px;
+    color: #333;
+}
+/* css鼠标经过效果 */
+.fl_ul ul li:hover a{
+    color:rgba(87, 172, 131, 0.8);
+}
+.fl_ul ul li:nth-child(1){
+    background-color:rgba(49, 194, 124,0.8);
+}
+.fl_ul ul li:nth-child(1) a{
+    color: #fff;
+}
+.fl_ul ul li:nth-child(3) img{
+    position:absolute;
+    top: 15px;
+    left: 30px;
+    width: 40px;
+}
+.ghd{
+    display: none;
+    padding-left: 7px;
+    position: absolute;
+    top: 65px;
+    left: -10px;
+    width: 150px;
+    height: 162px;
+    text-align: center;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 1px rgba(80, 79, 79, 0.4);
+    z-index: 1;
+}
+.ghd p{
+    position: relative;
+    margin-top: 12px;
+    width: 135px;
+    height: 25px;
+    font-size: 13px;
+    line-height: 23px;
+}
+.ghd p img{
+    position: absolute;
+    margin-top: -12px;
+   margin-left:   -30px;
+    max-height: 16px;
+    max-width: 16px;
+}
+.ghd p spam{
+    margin-left: 15px;
+}
+.ghd span{
+    float: left;
+    margin-top: 12px;
+    width: 135px;
+    height: 25px;
+    line-height: 28px;
+    border-radius: 12px;
+    color: #fff;
+    background-color:rgba(49, 194, 124,0.8);
+    cursor: pointer;
+}
+.fl_ul ul li:nth-child(3):hover .ghd{
+    display: block;
+}
+.input{
+    position: relative;
+    width: 280px;
+    float: left;
+}
+.input input{
+    padding-left: 5px;
+    width: 220px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 4px;
+    letter-spacing: 0.1px;
+    color: #dedede;
+    border: 1px solid #dedede;
+}
+.input i a{
+    position: absolute;
+    top: 32px;
+    right: 65px;
+    display: block;
+    height: 25px;
+    width: 25px;
+}
+.input i a::after{
+    position: absolute;
+    top: -32px;
+    left: 3px;
+    height: 25;
+    content: '\f002';
+    font-family: 'icomoon';
+    color: #999999;
+}
+.input i a:hover::after{
+    color:  rgba(87, 172, 131, 0.8);
+}
+.input span{
+    margin-left: 20px;
+}
+.input span:hover a{
+    color: rgba(87, 172, 131, 0.8);
+}
+.mod_select--open{
+    float: left;
+    margin-left: 15px;
+}
+.mod_select--open dt{
+    margin-top: 20px;
+    width: 125px;
+    height: 45px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(49, 194, 124);
+    color: #fff;
+    cursor: pointer;
+}
+.mod_select--open dt::after{
+    position: absolute;
+    content: '\ea43';
+    font-family: 'icomoon';
+    margin-left: 10px;
+    margin-top: -2px;
+    color: #fff;
+}
+.mod_select--open dd{
+    position: absolute;
+    display: none;
+    width: 125px;
+    height: 80px;
+    text-align: center;
+    border: 1px solid #999999;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    font-size: 15px;
+    background-color: #fff;
+}
+.mod_select--open:hover dd{
+    display:block;
+}
+.mod_select--open dd li{ 
+    float: none;
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+}
+.mod_select--open dd li a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.mod_select--open dd li:nth-child(1):hover{
+    border-top: 1px solid #dedede;
+}
+.mod_select--open dd li:hover{
+    background-color: rgb(49, 194, 124);
+}
+.mod_select--open dd li:hover a{
+    color: #fff;
+}
+.mod_select--pay{
+    float: left;
+    margin: 20px 0 0 20px;
+    width: 85px;
+    height: 45px;
+}
+.mod_select--pay dt{
+    width: 100%;
+    height: 45px;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(49, 194, 124);
+    cursor: pointer;
+}
+.mod_select--pay dt::after{
+    position: absolute;
+    margin-left: 5px;
+    margin-top: -2px;
+    content: '\ea43';
+    font-family: 'icomoon';
+}
+.mod_select--pay dt:hover{
+    color: #fff;
+}
+.mod_select--pay dd{
+    display: none;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    border: 1px solid #999999;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    font-size: 15px;
+    background-color: #fff;
+}
+.mod_select--pay dd li{ 
+    float: none;
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+}
+.mod_select--pay dd li a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.mod_select--pay:hover dd{
+    display:block;
+}
+.mod_select--pay dd li:nth-child(1):hover{
+    border-top: 1px solid #dedede;
+}
+.mod_select--pay dd li:hover{
+    background-color: rgb(49, 194, 124);
+}
+.mod_select--pay dd li:hover a{
+    color: #fff;
+}
+.user{
+    float: left;
+    margin: 20px 0 0 20px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #999999;
+    border-radius: 50%;
+}
+.user img{
+    width: 100%;
+    height: 100%;
+}
+.hearder_b{
+    margin-top: 5px;
+    height: 50px;
+    width: 100%;
+}
+.hearder_b ul{
+    padding-left: 285px;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+}
+.hearder_b ul li a{
+    font-size: 16px;
+    padding: 0  0  0 30px;
+}
+.hearder_b ul li a:hover{
+    color:rgb(49, 194, 124);
+}
+.dd{
+    padding: 30px 0;
+    height: 350px;
+    overflow: hidden;
+}
+.picture{
+    float: left;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: rgb(233, 223, 223);
+    overflow: hidden;
+}
+.picture img{
+    width: 250px;
+}
+.detial{
+    float: left;
+    width: 800px;
+    height: 100%;
+    margin: 35px 0 0 35px;
+}
+.detial h1{
+    font-size: 38px;
+}
+.detial p{
+    float:left;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 710px;
+    margin-top: 20px;
+    font-size: 14px;
+    overflow: hidden;
+    vertical-align: none;
+}
+.detial span{
+    float: left;
+    margin: 20px 0 0 8px;
+}
+.detial span a{
+    font-size: 16px;
+}
+.detial span:hover a{
+    color: rgb(49, 194, 124);
+}
+.detial ul{
+    float: left;
+    margin-top: 15px;
+    width: 100%;
+}
+.detial ul li a {
+    display: block;
+    padding: 0 10px;
+    font-size: 26px;
+    border-right: 1px solid #999999;
+}
+.detial ul li:hover a{
+    color: rgb(49, 194, 124);
+}
+.detial ul li:nth-child(3) a{
+    border: none;
+}
+.data__actions{
+    position: relative;
+    float: left;
+    margin-top: 20px;
+    height: 38px;
+    min-width: 122px;
+    text-align: center;
+    line-height: 38px;
+    color: #fff;
+}
+.data__actions::before{
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    content: '\f04b';
+    font-family: 'icomoon';
+    font-size: 16px;
+}
+.mod_btn_green:hover{
+    background-color: #149657;
+}
+.mod_btn_green__icon_play{
+    margin-left: 18px;
+    width: 13px;
+    height: 16px;
+    background-position: -80px -220px;
+}
+.mod_btn_green{
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid #31c27c;
+    background-color: #31c27c;
+    min-width: 122px;
+    text-align: center;
+    padding: 10px 18px;
+}
+.mod_btn{
+    position: relative;
+    min-width: 122px;
+    text-align: center;
+    padding: 10px 18px 10px 40px;
+    margin-left: 10px;
+    border: 1px solid #c9c9c9;
+    color: #000;
+    font-size: 18px;
+}
+.mod_btn::before{
+    position: absolute;
+    left: 15px;
+    top: 0;
+    content: '\f067';
+    font-family: 'icomoon';
+    color: #666666;
+}
+.mod_btn:hover{
+    background-color: #dedede;
+}
+.dd_music{
+    line-height: 30px;
+}
+.music_dh{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+}
+.music_dh h1{
+    float: left;
+    font-size: 26px;
+    font-weight: 500;
+}
+.music_dh span {
+    position: relative;
+    margin-top: 2px;
+    float: right;
+}
+.music_dh span a{
+    padding: 0 15px;
+}
+.music_dh span a::after{
+    position: absolute;
+    margin-left: 8px;
+    content: '\ea43';
+    font-family: 'icomoon';
+    font-size: 16px;
+}
+.music_dh span:hover a{
+    color:rgb(49, 194, 124) ;
+}
+.music_dd{
+    padding: 20px 0;
+    width: 100%;
+}
+.songlist__header{
+    position: relative;
+    padding-left: 46px;
+    padding-right: 95px;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    font-size: 14px;
+}
+.songlist__header_name{
+    float: left;
+    width: 47.685185%;
+    position: relative;
+    white-space: normal;
+}
+.songlist__header_album{
+    float: left;
+    padding-left: 15px;
+    width: 25.5%;
+    box-sizing: border-box;
+}
+.songlist__header_time{
+    position: absolute;
+    top: 0;
+    right: 38px;
+    width: 50px;
+}
+.songlist__list{
+    width: 100%;
+}
+.songlist__list li{
+    padding: 2px 0;
+    width: 100%;
+    overflow: hidden;
+}
+.songlist__list li:hover .songlist__songname span{
+    display: block;
+}
+.songlist__item{
+    position: relative;
+    padding-left: 46px;
+    padding-right: 95px;
+    clear: both;
+    width: 100%;
+    font-size: 14px;
+    color: #000;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.01);
+}
+.songlist__number {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: #999;
+    width: 36px;
+}
+.songlist__songname{
+    float: left;
+    width: 47.685185%;
+    position: relative;
+    white-space: normal;
+}
+.songlist__songname a:hover{
+    color: rgb(49, 194, 124) ;
+}
+.songlist__songname span{
+    display:none;
+    float: right;
+}
+.songlist__songname span a{
+    padding: 0 8px;
+}
+.songlist__songname span a:nth-child(1){
+    position: relative;
+}
+.songlist__songname span a:nth-child(1)::after{
+    content: '\ea1c';
+    font-family:'icomoon';
+    color: #999999;
+}
+.songlist__songname span a:nth-child(2)::after{
+    content: '\e900';
+    font-family:'icomoon';
+    color: #999999;
+}
+.songlist__songname span a:nth-child(2)::after:hover{
+    color: rgb(49, 194, 124);
+}
+.songlist__songname span a:nth-child(3)::after{
+    content: '\e901';
+    font-family:'icomoon';
+    color: #999999;
+}
+.songlist__item form{
+    position: absolute;
+    top: 0;
+    left: 450px;
+}
+.songlist__item form .num1{
+    width: 0;
+    height: 0;
+}
+.songlist__item form .submit{
+    opacity: 0;
+    cursor: pointer;
+}
+.songlist__album{
+    float: left;
+    padding-left: 15px;
+    width: 25.5%;
+    box-sizing: border-box;
+}
+.songlist__album  a:hover{
+    color: rgb(49, 194, 124) ;
+}
+.songlist__time{
+    position: absolute;
+    top: 0;
+    right: 38px;
+    width: 50px;
+}
+
+
+
